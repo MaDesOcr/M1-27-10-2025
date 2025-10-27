@@ -1,14 +1,19 @@
+import { Personnage } from "@/model/Personnage";
 import { Image, StyleSheet, Text, View } from "react-native";
-import { green } from "react-native-reanimated/lib/typescript/Colors";
 
-export default function FichePerso(){
+export default function FichePerso(
+    perso : Personnage
+//    {perso} : {perso : Personnage}
+){
+    
+    const image = perso.image;
     return(
         <View style={styles.card}>
             <View style={styles.txtInCard}>
-                <Text>Nom</Text>
-                <Text>Prenom</Text>
+                <Text>Nom : {perso.nom}</Text>
+                <Text>Prenom : {perso.prenom}</Text>
             </View>
-            <Image source={require("@/assets/images/react-logo.png")}
+            <Image source={image}
                 alt="textIMAGEMANQUANTE"/>
         </View>
     )
