@@ -7,8 +7,11 @@ export default function page1(){
     return(
         <View >
             <Text> BONJOUR </Text>
-            <DisplayDate/>
+            <DisplayDate stringToDisplay="Bonjour"/>
             <FichePerso/>
+            <FichePerso/>
+
+
         </View>
     )
 }

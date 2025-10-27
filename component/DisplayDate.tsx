@@ -1,8 +1,9 @@
 import { Text } from "react-native"
 
-
-export default function DisplayDate(){
+export default function DisplayDate({stringToDisplay} : {stringToDisplay : string}){
     return(
-        <Text> {new Date().toISOString()} </Text>
+        <Text> 
+            {stringToDisplay}
+            {new Date().toISOString()} </Text>
     )
 }
