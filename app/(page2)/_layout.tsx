@@ -3,11 +3,13 @@ import React from 'react';
 
 export default function TabLayout() {
   return (
-    <Tabs>
+    <Tabs screenOptions={{headerShown: false, 
+      tabBarIconStyle: {display:'none'}
+    }}>
       <Tabs.Screen
         name="tab1"
       />
-      <Tabs.Screen
+      <Tabs.Screen options={{tabBarIcon:()=>null}}
         name="tab2"
       />
     </Tabs>
