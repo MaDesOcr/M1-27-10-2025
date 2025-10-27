@@ -1,20 +1,21 @@
 import { Personnage } from "@/model/Personnage";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { Image } from "expo-image";
 
 export default function FichePerso(
     perso : Personnage
 //    {perso} : {perso : Personnage}
 ){
-   // const image = 
-    //const image = require(`@/assets/images/${perso.image}`);
+    //const image = `@/assets/images/${perso.image}`;
+
     return(
         <View style={styles.card}>
             <View style={styles.txtInCard}>
                 <Text>Nom : {perso.nom}</Text>
                 <Text>Prenom : {perso.prenom}</Text>
             </View>
-            <Image source={image}
-                alt="textIMAGEMANQUANTE"/>
+            {/* <Image source={require(image)}
+                alt="textIMAGEMANQUANTE"/> */}
         </View>
     )
 }
