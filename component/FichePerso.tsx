@@ -5,8 +5,8 @@ export default function FichePerso(
     perso : Personnage
 //    {perso} : {perso : Personnage}
 ){
-    
-    const image = perso.image;
+   // const image = 
+    //const image = require(`@/assets/images/${perso.image}`);
     return(
         <View style={styles.card}>
             <View style={styles.txtInCard}>

@@ -1,12 +1,18 @@
-[
+[   
     {  
     "nom" : "NomMoi1",
     "prenom" : "PrenomMoi1",
-    "image" : "string"
+    "image" : "splash-icon.png"
     },
     {  
     "nom" : "NomMoi2",
     "prenom" : "PrenomMoi2",
-    "image" : "string"
+    "image" : "icon.png"
+    }
+    ,
+    {  
+    "nom" : "NomMoi3",
+    "prenom" : "PrenomMoi3",
+    "image" : "react-logo.png"
     }
 ]
