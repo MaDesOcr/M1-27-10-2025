@@ -11,11 +11,11 @@ export default function FichePerso(
     return(
         <View style={styles.card}>
             <View style={styles.txtInCard}>
-                <Text>Nom : {perso.nom}</Text>
-                <Text>Prenom : {perso.prenom}</Text>
+                <Text>Nom : {perso.lastName}</Text>
+                <Text>Prenom : {perso.firstName}</Text>
             </View>
-            {/* <Image source={require(image)}
-                alt="textIMAGEMANQUANTE"/> */}
+            <Image style={styles.image} source={{uri:perso.image}}
+                alt="textIMAGEMANQUANTE"/>
         </View>
     )
 }
@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
     },
     txtInCard : {
 
+    },
+    image : {
+        height : 50,
+        width : 50
     }
 }
 

@@ -1,6 +1,16 @@
-import { Personnage } from "@/model/Personnage";
-import persons from "@/assets/data/persons.json"
-
-export default function getPersons(){
-    return persons as Personnage[]
+export default async function getPersons(){
+    
+    const data = 
+        await fetch("https://dummyjson.com/users",
+            {method : "GET"}
+        ).then((result)=>result.json())
+    
+    const personnages = data.users.map((
+        {firstName, lastName, image} : 
+            {firstName : string, lastName : string, image: string}
+    )=>({
+        firstName,
+        lastName,
+        image}))
+        return personnages;
 }
