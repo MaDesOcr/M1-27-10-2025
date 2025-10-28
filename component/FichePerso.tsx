@@ -4,10 +4,7 @@ import { Image } from "expo-image";
 
 export default function FichePerso(
     perso : Personnage
-//    {perso} : {perso : Personnage}
 ){
-    //const image = `@/assets/images/${perso.image}`;
-
     return(
         <View style={styles.card}>
             <View style={styles.txtInCard}>

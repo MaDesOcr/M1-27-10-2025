@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import DisplayDate from "@/component/DisplayDate";
 import FichePerso from "@/component/FichePerso";
 import { Personnage } from "@/model/Personnage";
 import getPersons from "@/service/PersonnageService";
+import { router, useRouter } from "expo-router";
 
-export default function page1(){
+export default function page1() {
 
-    const [persos, setPersos]= useState<Personnage[]>([]);
+    const router = useRouter();
 
-    useEffect(()=>{
-        getPersons().then((data)=>setPersos(data))        
+    const [persos, setPersos] = useState<Personnage[]>([]);
+
+    useEffect(() => {
+        getPersons().then((data) => setPersos(data))
     }, [])
-      
-    return(
-        <View >
-            {persos.map((p, i) => 
-                <FichePerso {...p} key={i}/>
+
+    return (
+        <View>
+            {persos.map((p) =>
+                <Pressable onPress={()=>
+                        router.navigate({pathname: "pageDetail",
+                            params:{id: p.id}
+                        })}>
+                    <FichePerso {...p} key={p.id} />
+                </Pressable>
+
             )}
-            
         </View>
     )
 }
