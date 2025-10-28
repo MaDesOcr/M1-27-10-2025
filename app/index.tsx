@@ -6,8 +6,8 @@ export default function Index() {
   return (
     <View style={style.viewStyle}>
 
-      <Button onPress={()=>router.push("/page1")} 
-      title="Page 1"/>
+      <Button onPress={()=>router.push("/userList")} 
+      title="Users Liste"/>
       <Button onPress={()=>router.push("/tab1")} 
       title="Page 2"/>
 

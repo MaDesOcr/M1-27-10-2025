@@ -7,13 +7,12 @@ export default function RootLayout() {
   return (
     <Stack screenOptions={{
         title:"",
-         //headerTitle:()=><Ionicons name="home"></Ionicons>,
          headerLeft:({...props})=><Ionicons {...props}
          name="home">
-          
          </Ionicons>
+         
       }}>
-      <Stack.Screen name="page1"/>
+      <Stack.Screen name="userList"/>
       <Stack.Screen name="(page2)"/>
     </Stack>
   )
